@@ -1,0 +1,73 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36" version="29.6.6">
+  <diagram name="Inventory Service Class Diagram" id="g1kIDGSqQwZfm4pMv6uj">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="YgGk7ioW4cKjg6DrTB_o-1" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;" value="InventoryController «controller» + create() + getStock(productId) + setStock(productId) + reserve() + release() + confirm() + getLowStock()" vertex="1">
+          <mxGeometry height="180" width="260" x="20" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="YgGk7ioW4cKjg6DrTB_o-2" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;" value="InventoryService «service» + createInventory() + reserve() + release() + confirm() + expireStaleReservations()" vertex="1">
+          <mxGeometry height="180" width="260" x="320" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="YgGk7ioW4cKjg6DrTB_o-3" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;" value="InventoryRepository «repository» + findByProductId() + findByProductIdForUpdate()" vertex="1">
+          <mxGeometry height="120" width="240" x="620" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="YgGk7ioW4cKjg6DrTB_o-4" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;" value="ReservationRepository «repository» + findByOrderId() + findExpiredReservations() + findByInventoryIdAndStatus()" vertex="1">
+          <mxGeometry height="140" width="240" x="620" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="YgGk7ioW4cKjg6DrTB_o-5" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;" value="Inventory «entity» id: UUID productId: UUID availableQty: int reservedQty: int soldQty: int lowStockThreshold: int createdAt updatedAt" vertex="1">
+          <mxGeometry height="200" width="260" x="20" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="YgGk7ioW4cKjg6DrTB_o-6" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;" value="StockReservation «entity» id: UUID inventoryId: UUID orderId: UUID qty: int status: ReservationStatus expiresAt createdAt" vertex="1">
+          <mxGeometry height="200" width="260" x="320" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="YgGk7ioW4cKjg6DrTB_o-7" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;" value="ReservationStatus «enum» RESERVED CONFIRMED RELEASED" vertex="1">
+          <mxGeometry height="120" width="200" x="620" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="YgGk7ioW4cKjg6DrTB_o-8" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;" value="ProductClient «feign client» + existsById(productId)" vertex="1">
+          <mxGeometry height="100" width="220" x="900" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="YgGk7ioW4cKjg6DrTB_o-9" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;" value="StockEventProducer «kafka producer» + publishStockLow()" vertex="1">
+          <mxGeometry height="100" width="220" x="900" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="YgGk7ioW4cKjg6DrTB_o-10" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;" value="ReservationExpiryJob «scheduled» + expireStaleReservations()" vertex="1">
+          <mxGeometry height="100" width="220" x="900" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="YgGk7ioW4cKjg6DrTB_o-11" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;" value="ReserveRequest «dto» productId orderId qty" vertex="1">
+          <mxGeometry height="100" width="200" x="20" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="YgGk7ioW4cKjg6DrTB_o-12" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;" value="StockResponse «dto» productId availableQty reservedQty soldQty lowStockThreshold" vertex="1">
+          <mxGeometry height="120" width="240" x="260" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="YgGk7ioW4cKjg6DrTB_o-13" edge="1" parent="1" source="YgGk7ioW4cKjg6DrTB_o-1" style="endArrow=block;" target="YgGk7ioW4cKjg6DrTB_o-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YgGk7ioW4cKjg6DrTB_o-14" edge="1" parent="1" source="YgGk7ioW4cKjg6DrTB_o-2" style="endArrow=block;" target="YgGk7ioW4cKjg6DrTB_o-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YgGk7ioW4cKjg6DrTB_o-15" edge="1" parent="1" source="YgGk7ioW4cKjg6DrTB_o-2" style="endArrow=block;" target="YgGk7ioW4cKjg6DrTB_o-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YgGk7ioW4cKjg6DrTB_o-16" edge="1" parent="1" source="YgGk7ioW4cKjg6DrTB_o-3" style="endArrow=block;" target="YgGk7ioW4cKjg6DrTB_o-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YgGk7ioW4cKjg6DrTB_o-17" edge="1" parent="1" source="YgGk7ioW4cKjg6DrTB_o-4" style="endArrow=block;" target="YgGk7ioW4cKjg6DrTB_o-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YgGk7ioW4cKjg6DrTB_o-18" edge="1" parent="1" source="YgGk7ioW4cKjg6DrTB_o-6" style="endArrow=block;" target="YgGk7ioW4cKjg6DrTB_o-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YgGk7ioW4cKjg6DrTB_o-19" edge="1" parent="1" source="YgGk7ioW4cKjg6DrTB_o-2" style="endArrow=block;" target="YgGk7ioW4cKjg6DrTB_o-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YgGk7ioW4cKjg6DrTB_o-20" edge="1" parent="1" source="YgGk7ioW4cKjg6DrTB_o-2" style="endArrow=block;" target="YgGk7ioW4cKjg6DrTB_o-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YgGk7ioW4cKjg6DrTB_o-21" edge="1" parent="1" source="YgGk7ioW4cKjg6DrTB_o-10" style="endArrow=block;" target="YgGk7ioW4cKjg6DrTB_o-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

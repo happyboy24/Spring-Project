@@ -1,0 +1,85 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36" version="29.6.6">
+  <diagram name="Page-1" id="KGS0O-A2rIOMCyU5np3i">
+    <mxGraphModel dx="1636" dy="451" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="LHUWbOd8m0kyWFnjdSSg-18" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="OrderEventConsumer" vertex="1">
+          <mxGeometry height="86" width="250" x="190" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="LHUWbOd8m0kyWFnjdSSg-19" parent="LHUWbOd8m0kyWFnjdSSg-18" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&amp;nbsp; -&amp;nbsp; WalletServicewalletService" vertex="1">
+          <mxGeometry height="26" width="250" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="LHUWbOd8m0kyWFnjdSSg-20" parent="LHUWbOd8m0kyWFnjdSSg-18" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="250" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="LHUWbOd8m0kyWFnjdSSg-21" parent="LHUWbOd8m0kyWFnjdSSg-18" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ OnOrderPlaced(OrderPlacedEvent) : void" vertex="1">
+          <mxGeometry height="26" width="250" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="LHUWbOd8m0kyWFnjdSSg-35" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="WalletController" vertex="1">
+          <mxGeometry height="170" width="261" x="499" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="LHUWbOd8m0kyWFnjdSSg-36" parent="LHUWbOd8m0kyWFnjdSSg-35" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- WalletService walletService" vertex="1">
+          <mxGeometry height="26" width="261" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="LHUWbOd8m0kyWFnjdSSg-39" parent="LHUWbOd8m0kyWFnjdSSg-35" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="261" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="LHUWbOd8m0kyWFnjdSSg-37" parent="LHUWbOd8m0kyWFnjdSSg-35" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ fundWallet : ResponseEntity" vertex="1">
+          <mxGeometry height="26" width="261" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="LHUWbOd8m0kyWFnjdSSg-38" parent="LHUWbOd8m0kyWFnjdSSg-35" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ getBalance : BalanceResponse&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;+ getTransactions : Page&amp;lt;WalletTransaction&amp;gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;+ transfer : ResponseEntity&lt;/div&gt;" vertex="1">
+          <mxGeometry height="84" width="261" y="86" as="geometry" />
+        </mxCell>
+        <mxCell id="LHUWbOd8m0kyWFnjdSSg-42" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="WalletService" vertex="1">
+          <mxGeometry height="200" width="370" x="130" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="LHUWbOd8m0kyWFnjdSSg-43" parent="LHUWbOd8m0kyWFnjdSSg-42" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- WalletRepository walletRepository" vertex="1">
+          <mxGeometry height="26" width="370" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="LHUWbOd8m0kyWFnjdSSg-44" parent="LHUWbOd8m0kyWFnjdSSg-42" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- TransactionRepository txRepository" vertex="1">
+          <mxGeometry height="26" width="370" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="LHUWbOd8m0kyWFnjdSSg-46" parent="LHUWbOd8m0kyWFnjdSSg-42" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="370" y="78" as="geometry" />
+        </mxCell>
+        <mxCell id="LHUWbOd8m0kyWFnjdSSg-45" parent="LHUWbOd8m0kyWFnjdSSg-42" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ fundWallet (userId, amount, reference) : WalletTransaction&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;+ deductBalance (userId, amount, reference) : WalletTransaction&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;+ transfer (fromUserId, toUserId, amount) : void&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;+ checkIdempotency ( reference ) : void&lt;/div&gt;" vertex="1">
+          <mxGeometry height="114" width="370" y="86" as="geometry" />
+        </mxCell>
+        <mxCell id="LHUWbOd8m0kyWFnjdSSg-47" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="FundWalletRequest" vertex="1">
+          <mxGeometry height="78" width="180" x="540" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="LHUWbOd8m0kyWFnjdSSg-48" parent="LHUWbOd8m0kyWFnjdSSg-47" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ Long amount" vertex="1">
+          <mxGeometry height="26" width="180" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="LHUWbOd8m0kyWFnjdSSg-49" parent="LHUWbOd8m0kyWFnjdSSg-47" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ String currency" vertex="1">
+          <mxGeometry height="26" width="180" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="LHUWbOd8m0kyWFnjdSSg-51" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="BalanceResponse" vertex="1">
+          <mxGeometry height="130" width="150" x="770" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="LHUWbOd8m0kyWFnjdSSg-52" parent="LHUWbOd8m0kyWFnjdSSg-51" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ UUID userId" vertex="1">
+          <mxGeometry height="26" width="150" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="LHUWbOd8m0kyWFnjdSSg-53" parent="LHUWbOd8m0kyWFnjdSSg-51" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ Long amount" vertex="1">
+          <mxGeometry height="26" width="150" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="LHUWbOd8m0kyWFnjdSSg-54" parent="LHUWbOd8m0kyWFnjdSSg-51" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ String currency&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;+ Boolean isActive&lt;/div&gt;" vertex="1">
+          <mxGeometry height="52" width="150" y="78" as="geometry" />
+        </mxCell>
+        <mxCell id="LHUWbOd8m0kyWFnjdSSg-55" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="TransactionRepository" vertex="1">
+          <mxGeometry height="104" width="480" x="-360" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="LHUWbOd8m0kyWFnjdSSg-56" parent="LHUWbOd8m0kyWFnjdSSg-55" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ findByWalletIdOrderByCreatedAtDesc(walletId, pageable) : Page &amp;lt;WalletTransaction&amp;gt;" vertex="1">
+          <mxGeometry height="26" width="480" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="LHUWbOd8m0kyWFnjdSSg-57" parent="LHUWbOd8m0kyWFnjdSSg-55" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ existsByReference(reference) : boolean" vertex="1">
+          <mxGeometry height="26" width="480" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="LHUWbOd8m0kyWFnjdSSg-58" parent="LHUWbOd8m0kyWFnjdSSg-55" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ save(tx) : WalletTransaction" vertex="1">
+          <mxGeometry height="26" width="480" y="78" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
